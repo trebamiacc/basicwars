@@ -1,0 +1,48 @@
+﻿<RNTileset>
+	<info>
+		<name>Michael-01</name>
+		<size>32</size>
+	</info>
+	<tiles>
+		<tile name="TERRAIN_EMPTY" img="Config\Tilesets\Michael-01\Blank.png"/>
+    <tile name="TERRAIN_ROAD" img="Config\Tilesets\Michael-01\Road.png"/>
+    <tile name="TERRAIN_GRASSLAND" img="Config\Tilesets\Michael-01\Grass.png"/>
+    <tile name="TERRAIN_TREEONGRASS" img="Config\Tilesets\Michael-01\TreeOnGrass.png"/>
+    <tile name="TERRAIN_MOUNTAIN" img="Config\Tilesets\Michael-01\Mountain.png"/>
+    <tile name="TERRAIN_GRASSTOCAVE" img="Config\Tilesets\Michael-01\GrassToCave.png"/>
+    <tile name="TERRAIN_WATER" img="Config\Tilesets\Michael-01\Water.png"/>
+    <tile name="TERRAIN_NWATERGRASS" img="Config\Tilesets\Michael-01\NWaterGrass.png"/>
+    <tile name="TERRAIN_BRIDGEHORIZ" img="Config\Tilesets\Michael-01\BridgeHoriz.png"/>
+    <tile name="TERRAIN_WATERTOBRIDGEH" img="Config\Tilesets\Michael-01\WaterToBridgeH.png"/>
+    <tile name="TERRAIN_ROADVERTGRASS" img="Config\Tilesets\Michael-01\RoadVertGrass.png"/>
+    <tile name="TERRAIN_ROADHORIZGRASS" img="Config\Tilesets\Michael-01\RoadHorizGrass.png"/>
+    <tile name="TERRAIN_ROADBLEFT" img="Config\Tilesets\Michael-01\RoadBottomLeft.png"/>
+    <tile name="TERRAIN_ROADBRIGHT" img="Config\Tilesets\Michael-01\RoadBottomRight.png"/>
+    <tile name="TERRAIN_ROADTRIGHT" img="Config\Tilesets\Michael-01\RoadTopRight.png"/>
+    <tile name="TERRAIN_ROADTLEFT" img="Config\Tilesets\Michael-01\RoadTopLeft.png"/>
+    <tile name="TERRAIN_ROADTEENORTH" img="Config\Tilesets\Michael-01\RoadTeeNorth.png"/>
+    <tile name="PLAYER" img="Config\Tilesets\Michael-01\Player-Transparent.png"/>
+    <tile name="MONSTER_BASIC" img="Config\Tilesets\Michael-01\Monster.png"/>
+    <tile name="MONSTER_2" img="Config\Tilesets\Michael-01\Monster2.png"/>
+	</tiles>
+  <terrain-types>
+    <item name="EMPTY" char="0" tile="TERRAIN_EMPTY" passable="false"/>
+    <item name="WATER" char="1" tile="TERRAIN_WATER" passable="false"/>
+    <item name="MOUNTAIN" char="2" tile="TERRAIN_MOUNTAIN" passable="false"/>
+    <item name="GRASS" char="3" tile="TERRAIN_GRASSLAND" passable="true"/>
+    <item name="ROAD" char="4" tile="TERRAIN_ROAD" passable="true"/>
+    <item name="TREEONGRASS" char="5" tile="TERRAIN_TREEONGRASS" passable="false"/>
+    <item name="NWATERGRASS" char="6" tile="TERRAIN_NWATERGRASS" passable="false"/>
+    <item name="BRIDGEHORIZ" char="7" tile="TERRAIN_BRIDGEHORIZ" passable="true"/>
+    <item name="WATERTOBRIDGEH" char="8" tile="TERRAIN_WATERTOBRIDGEH" passable="false"/>
+    <item name="CAVEONGRASS" char="9" tile="TERRAIN_EMPTY" passable="true"/>
+    <item name="ROADBL" char="a" tile="TERRAIN_ROADBLEFT" passable="true"/>
+    <item name="ROADBR" char="b" tile="TERRAIN_ROADBRIGHT" passable="true"/>
+    <item name="ROADTL" char="c" tile="TERRAIN_ROADTLEFT" passable="true"/>
+    <item name="ROADTR" char="d" tile="TERRAIN_ROADTRIGHT" passable="true"/>
+    <item name="ROADV" char="e" tile="TERRAIN_ROADVERTGRASS" passable="true"/>
+    <item name="ROADH" char="f" tile="TERRAIN_ROADHORIZGRASS" passable="true"/>
+    <item name="ROADTEEN" char="g" tile="TERRAIN_ROADTEENORTH" passable="true"/>
+    <item name="GRASSTOCAVE" char="h" tile="TERRAIN_GRASSTOCAVE" passable="true"/>
+  </terrain-types>
+</RNTileset>
