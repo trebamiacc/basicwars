@@ -1,0 +1,15 @@
+﻿<RNTileset>
+	<info>
+		<name>Michael-Translucent</name>
+		<size>32</size>
+	</info>
+	<tiles>
+    <tile name="TERRAIN_EMPTY" img="Config\Tilesets\Michael-01\Blank.png"/>
+    <tile name="TERRAIN_WATER" img="Config\Tilesets\Michael-01\Water.png"/>
+    <tile name="TERRAIN_MOUNTAIN" img="Config\Tilesets\Michael-01\Mountain.png"/>
+    <tile name="TERRAIN_GRASSLAND" img="Config\Tilesets\Michael-01\Grass.png"/>
+    <tile name="TERRAIN_ROAD" img="Config\Tilesets\Michael-01\Road.png"/>
+    <tile name="PLAYER" img="Config\Tilesets\Michael-01\Player-Translucent.png"/>
+		<tile name="MONSTER_BASIC" img="Config\Tilesets\Michael-01\Monster.png"/>
+	</tiles>
+</RNTileset>
