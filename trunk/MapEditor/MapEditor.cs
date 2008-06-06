@@ -260,7 +260,6 @@ namespace MapEditor
                 }
 
                 // Draw the base map, which is currently defaulted to grass tiles
-                // loop through all the tiles and find which one was clicked
                 for (int i = 0; i < mapsize; i++)
                     for (int j = 0; j < mapsize; j++)
                         AddTileToMap(i, j);
