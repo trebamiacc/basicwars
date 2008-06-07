@@ -26,30 +26,37 @@ namespace TileSetEditor
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
-            // Add some values to the tileset to make sure serialization is working
-            Bitmap tileimage = new Bitmap("Grass.png");
-            Tile myTile = new Tile(tileimage, "Ugly", 0, Tile.TileLayer.Terrain,
-                Tile.TileType.Plain, 0, 0);
-            myTileSet.Name = "TileSet1";
-            myTileSet.Tiles.Add(myTile);
+            SaveFileDialog myDialog = new SaveFileDialog();
+			myDialog.InitialDirectory = "";
+			myDialog.RestoreDirectory = true;
+            myDialog.Filter = "Tile Sets|*.tiledat";
+            myDialog.AddExtension = true;
+            myDialog.DefaultExt = ".dat";
 
-            string myMsg = myTileSet.Name + " - " + myTileSet.Tiles[0].Name;
-            MessageBox.Show(myMsg);
-            
-            myTileSet.Save("TileSet1.dat");
-            */
+			if (myDialog.ShowDialog() == DialogResult.OK)
+			{
+                myTileSet.Save(myDialog.FileName);
+			}
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
-            myTileSet.Load("TileSet1.dat");
+            OpenFileDialog myDialog = new OpenFileDialog();
+            myDialog.InitialDirectory = "";
+            myDialog.RestoreDirectory = true;
+            myDialog.Filter = "Tile Sets|*.tiledat";
+            myDialog.Multiselect = false;
 
-            string myMsg = myTileSet.Name + " - " + myTileSet.Tiles[0].Name;
-            MessageBox.Show(myMsg);
-             * 
-             */
+            if (myDialog.ShowDialog() == DialogResult.OK)
+            {
+                myTileSet.Load(myDialog.FileName);
+                // Clear list box and reset it
+                listBox_Tiles.Items.Clear();
+                for (int i = 0; i < myTileSet.Tiles.Count; i++)
+                {
+                    listBox_Tiles.Items.Add(myTileSet.Tiles[i]);
+                }
+            }
         }
 
         private void button_AddTile_Click(object sender, EventArgs e)
@@ -68,6 +75,25 @@ namespace TileSetEditor
             //NewMapDialog NewMapForm = new NewMapDialog();
             //if (NewMapForm.ShowDialog() == DialogResult.OK)
             
+        }
+
+        // Make sure a tile is selected and if so remove it from the listbox and tileset
+        private void button_RemoveTile_Click(object sender, EventArgs e)
+        {
+            Tile SelectedTile = (Tile)listBox_Tiles.SelectedItem;
+            if (SelectedTile != null)
+            {
+                listBox_Tiles.Items.Remove(SelectedTile);
+                myTileSet.Tiles.Remove(SelectedTile);
+            }
+        }
+
+        // User wants to start a new list
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Clear the tileset and listbox
+            listBox_Tiles.Items.Clear();
+            myTileSet.Tiles.Clear();
         }
     }
 }
