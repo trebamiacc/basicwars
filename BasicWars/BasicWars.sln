@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicWars", "BasicWars.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapEditor", "..\MapEditor\MapEditor.csproj", "{A2B26120-65F3-4B8B-9EEE-2913C992C234}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileSetEditor", "..\TileSetEditor\TileSetEditor.csproj", "{F4580BC7-7B71-48E2-B91A-2A27F44CCA90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{A2B26120-65F3-4B8B-9EEE-2913C992C234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B26120-65F3-4B8B-9EEE-2913C992C234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B26120-65F3-4B8B-9EEE-2913C992C234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4580BC7-7B71-48E2-B91A-2A27F44CCA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4580BC7-7B71-48E2-B91A-2A27F44CCA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4580BC7-7B71-48E2-B91A-2A27F44CCA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4580BC7-7B71-48E2-B91A-2A27F44CCA90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
