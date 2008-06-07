@@ -106,6 +106,7 @@ namespace TileSetEditor
             this.button_AddTile.TabIndex = 3;
             this.button_AddTile.Text = "Add Tile";
             this.button_AddTile.UseVisualStyleBackColor = true;
+            this.button_AddTile.Click += new System.EventHandler(this.button_AddTile_Click);
             // 
             // button_EditTile
             // 
