@@ -17,11 +17,12 @@ namespace TileSetEditor
     *    bonuses for units fighting on certain types, as well as whether a unit can move 
     *    onto that tile.
     */
+    [Serializable]
     public class Tile
     {
         // Define enums for TileLayer and TileType
-        enum TileLayer { Terrain = 1, Structure = 2, Unit = 3 }
-        enum TileType { Road = 1, Plain = 2, Mountain = 3, ShallowWater = 4, DeepWater = 5 }
+        public enum TileLayer { Terrain = 1, Structure = 2, Unit = 3 }
+        public enum TileType { Road = 1, Plain = 2, Mountain = 3, ShallowWater = 4, DeepWater = 5 }
 
         // Bitmap surface to store tile image on
         private Bitmap iTileImage;
