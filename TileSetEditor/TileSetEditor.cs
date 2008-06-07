@@ -51,5 +51,18 @@ namespace TileSetEditor
              * 
              */
         }
+
+        private void button_AddTile_Click(object sender, EventArgs e)
+        {
+            NewTileDialog NewTileForm = new NewTileDialog();
+            if (NewTileForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            
+            //NewMapDialog NewMapForm = new NewMapDialog();
+            //if (NewMapForm.ShowDialog() == DialogResult.OK)
+            
+        }
     }
 }
