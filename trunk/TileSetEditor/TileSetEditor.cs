@@ -54,10 +54,15 @@ namespace TileSetEditor
 
         private void button_AddTile_Click(object sender, EventArgs e)
         {
-            NewTileDialog NewTileForm = new NewTileDialog();
+            NewTileDialog NewTileForm = new NewTileDialog(myTileSet);
             if (NewTileForm.ShowDialog() == DialogResult.OK)
             {
-
+                // Update the tile list
+                listBox_Tiles.Items.Clear();
+                for ( int i = 0; i < myTileSet.Tiles.Count; i++)
+                {
+                    listBox_Tiles.Items.Add(myTileSet.Tiles[i]);
+                }
             }
             
             //NewMapDialog NewMapForm = new NewMapDialog();

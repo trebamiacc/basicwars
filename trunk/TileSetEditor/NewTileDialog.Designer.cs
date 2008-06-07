@@ -30,8 +30,17 @@ namespace TileSetEditor
         {
             this.label_TileName = new System.Windows.Forms.Label();
             this.textBox_TileName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_TileID = new System.Windows.Forms.TextBox();
             this.label_TileID = new System.Windows.Forms.Label();
+            this.label_TileLayer = new System.Windows.Forms.Label();
+            this.comboBox_TileLayer = new System.Windows.Forms.ComboBox();
+            this.comboBox_TileType = new System.Windows.Forms.ComboBox();
+            this.label_TileType = new System.Windows.Forms.Label();
+            this.button_LoadImage = new System.Windows.Forms.Button();
+            this.pictureBox_TileImage = new System.Windows.Forms.PictureBox();
+            this.button_SaveTile = new System.Windows.Forms.Button();
+            this.button_Cancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TileImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label_TileName
@@ -47,16 +56,16 @@ namespace TileSetEditor
             // 
             this.textBox_TileName.Location = new System.Drawing.Point(47, 11);
             this.textBox_TileName.Name = "textBox_TileName";
-            this.textBox_TileName.Size = new System.Drawing.Size(112, 20);
+            this.textBox_TileName.Size = new System.Drawing.Size(129, 20);
             this.textBox_TileName.TabIndex = 1;
             // 
-            // textBox1
+            // textBox_TileID
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(47, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBox_TileID.Enabled = false;
+            this.textBox_TileID.Location = new System.Drawing.Point(47, 37);
+            this.textBox_TileID.Name = "textBox_TileID";
+            this.textBox_TileID.Size = new System.Drawing.Size(37, 20);
+            this.textBox_TileID.TabIndex = 3;
             // 
             // label_TileID
             // 
@@ -67,17 +76,98 @@ namespace TileSetEditor
             this.label_TileID.TabIndex = 2;
             this.label_TileID.Text = "ID:";
             // 
+            // label_TileLayer
+            // 
+            this.label_TileLayer.AutoSize = true;
+            this.label_TileLayer.Location = new System.Drawing.Point(5, 65);
+            this.label_TileLayer.Name = "label_TileLayer";
+            this.label_TileLayer.Size = new System.Drawing.Size(36, 13);
+            this.label_TileLayer.TabIndex = 4;
+            this.label_TileLayer.Text = "Layer:";
+            // 
+            // comboBox_TileLayer
+            // 
+            this.comboBox_TileLayer.FormattingEnabled = true;
+            this.comboBox_TileLayer.Location = new System.Drawing.Point(47, 63);
+            this.comboBox_TileLayer.Name = "comboBox_TileLayer";
+            this.comboBox_TileLayer.Size = new System.Drawing.Size(129, 21);
+            this.comboBox_TileLayer.TabIndex = 5;
+            // 
+            // comboBox_TileType
+            // 
+            this.comboBox_TileType.FormattingEnabled = true;
+            this.comboBox_TileType.Location = new System.Drawing.Point(47, 90);
+            this.comboBox_TileType.Name = "comboBox_TileType";
+            this.comboBox_TileType.Size = new System.Drawing.Size(129, 21);
+            this.comboBox_TileType.TabIndex = 7;
+            // 
+            // label_TileType
+            // 
+            this.label_TileType.AutoSize = true;
+            this.label_TileType.Location = new System.Drawing.Point(5, 92);
+            this.label_TileType.Name = "label_TileType";
+            this.label_TileType.Size = new System.Drawing.Size(34, 13);
+            this.label_TileType.TabIndex = 6;
+            this.label_TileType.Text = "Type:";
+            // 
+            // button_LoadImage
+            // 
+            this.button_LoadImage.Location = new System.Drawing.Point(8, 126);
+            this.button_LoadImage.Name = "button_LoadImage";
+            this.button_LoadImage.Size = new System.Drawing.Size(76, 37);
+            this.button_LoadImage.TabIndex = 8;
+            this.button_LoadImage.Text = "Load Image";
+            this.button_LoadImage.UseVisualStyleBackColor = true;
+            this.button_LoadImage.Click += new System.EventHandler(this.button_LoadImage_Click);
+            // 
+            // pictureBox_TileImage
+            // 
+            this.pictureBox_TileImage.Location = new System.Drawing.Point(120, 131);
+            this.pictureBox_TileImage.Name = "pictureBox_TileImage";
+            this.pictureBox_TileImage.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox_TileImage.TabIndex = 9;
+            this.pictureBox_TileImage.TabStop = false;
+            // 
+            // button_SaveTile
+            // 
+            this.button_SaveTile.Location = new System.Drawing.Point(8, 190);
+            this.button_SaveTile.Name = "button_SaveTile";
+            this.button_SaveTile.Size = new System.Drawing.Size(76, 40);
+            this.button_SaveTile.TabIndex = 10;
+            this.button_SaveTile.Text = "Save Tile";
+            this.button_SaveTile.UseVisualStyleBackColor = true;
+            this.button_SaveTile.Click += new System.EventHandler(this.button_SaveTile_Click);
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Location = new System.Drawing.Point(100, 190);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(76, 40);
+            this.button_Cancel.TabIndex = 11;
+            this.button_Cancel.Text = "Cancel";
+            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
             // NewTileDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 256);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(211, 256);
+            this.Controls.Add(this.button_Cancel);
+            this.Controls.Add(this.button_SaveTile);
+            this.Controls.Add(this.pictureBox_TileImage);
+            this.Controls.Add(this.button_LoadImage);
+            this.Controls.Add(this.comboBox_TileType);
+            this.Controls.Add(this.label_TileType);
+            this.Controls.Add(this.comboBox_TileLayer);
+            this.Controls.Add(this.label_TileLayer);
+            this.Controls.Add(this.textBox_TileID);
             this.Controls.Add(this.label_TileID);
             this.Controls.Add(this.textBox_TileName);
             this.Controls.Add(this.label_TileName);
             this.Name = "NewTileDialog";
             this.Text = "New Tile";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_TileImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,7 +177,15 @@ namespace TileSetEditor
 
         private System.Windows.Forms.Label label_TileName;
         private System.Windows.Forms.TextBox textBox_TileName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_TileID;
         private System.Windows.Forms.Label label_TileID;
+        private System.Windows.Forms.Label label_TileLayer;
+        private System.Windows.Forms.ComboBox comboBox_TileLayer;
+        private System.Windows.Forms.ComboBox comboBox_TileType;
+        private System.Windows.Forms.Label label_TileType;
+        private System.Windows.Forms.Button button_LoadImage;
+        private System.Windows.Forms.PictureBox pictureBox_TileImage;
+        private System.Windows.Forms.Button button_SaveTile;
+        private System.Windows.Forms.Button button_Cancel;
     }
 }
