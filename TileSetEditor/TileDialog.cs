@@ -44,6 +44,7 @@ namespace TileSetEditor
             comboBox_Team.Items.Add("0");
             comboBox_Team.Items.Add("1");
             comboBox_Team.Items.Add("2");
+            comboBox_Team.Items.Add("3");
 
             // If we are adding a new tile set default values otherwise load them from
             // the tile we're editing
