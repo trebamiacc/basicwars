@@ -61,7 +61,7 @@ namespace TileSetEditor
 
         private void button_AddTile_Click(object sender, EventArgs e)
         {
-            NewTileDialog NewTileForm = new NewTileDialog(myTileSet);
+            TileDialog NewTileForm = new TileDialog(myTileSet, null);
             if (NewTileForm.ShowDialog() == DialogResult.OK)
             {
                 // Update the tile list
@@ -94,6 +94,25 @@ namespace TileSetEditor
             // Clear the tileset and listbox
             listBox_Tiles.Items.Clear();
             myTileSet.Tiles.Clear();
+        }
+
+        // Make sure we pass the selected tile to the TileDialog
+        private void button_EditTile_Click(object sender, EventArgs e)
+        {
+            Tile SelectedTile = (Tile)listBox_Tiles.SelectedItem;
+            if (SelectedTile != null)
+            {
+                TileDialog AddTileForm = new TileDialog(myTileSet, SelectedTile);
+                if (AddTileForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Update the tile list
+                    listBox_Tiles.Items.Clear();
+                    for (int i = 0; i < myTileSet.Tiles.Count; i++)
+                    {
+                        listBox_Tiles.Items.Add(myTileSet.Tiles[i]);
+                    }
+                }
+            }
         }
     }
 }

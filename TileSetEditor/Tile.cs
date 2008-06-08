@@ -78,8 +78,32 @@ namespace TileSetEditor
             set { iY = value; }
         }
 
+        // Tile Width
+        private int iWidth = 0;
+        public int Width
+        {
+            get { return iWidth; }
+            set { iWidth = value; }
+        }
+
+        // Tile Height
+        private int iHeight = 0;
+        public int Height
+        {
+            get { return iHeight; }
+            set { iHeight = value; }
+        }
+
+        // Tile Team if applicable, 0 = does not apply, 1 = red, 2 = blue, 3 = neutral
+        private int iTeam = 0;
+        public int Team
+        {
+            get { return iTeam; }
+            set { iTeam = value; }
+        }
+
         public Tile(Bitmap tileimage, string tilename, int tileID, TileLayer tileLayer,
-                    TileType tileType, int x, int y)
+                    TileType tileType, int x, int y, int width, int height, int team)
         {
             iTileImage = tileimage;
             iName = tilename;
@@ -88,6 +112,9 @@ namespace TileSetEditor
             iType = tileType;
             iX = x;
             iY = y;
+            iWidth = width;
+            iHeight = height;
+            iTeam = team;
         }
 
         // check if point Mx, My is within the tile image
