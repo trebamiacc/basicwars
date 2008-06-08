@@ -64,7 +64,7 @@ namespace TileSetEditor
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -117,6 +117,7 @@ namespace TileSetEditor
             this.button_EditTile.TabIndex = 4;
             this.button_EditTile.Text = "Edit Tile";
             this.button_EditTile.UseVisualStyleBackColor = true;
+            this.button_EditTile.Click += new System.EventHandler(this.button_EditTile_Click);
             // 
             // button_RemoveTile
             // 

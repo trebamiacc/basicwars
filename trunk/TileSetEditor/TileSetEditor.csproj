@@ -36,11 +36,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewTileDialog.cs">
+    <Compile Include="TileDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewTileDialog.Designer.cs">
-      <DependentUpon>NewTileDialog.cs</DependentUpon>
+    <Compile Include="TileDialog.Designer.cs">
+      <DependentUpon>TileDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Tile.cs" />
     <Compile Include="TileSet.cs" />
@@ -52,9 +52,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NewTileDialog.resx">
+    <EmbeddedResource Include="TileDialog.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>NewTileDialog.cs</DependentUpon>
+      <DependentUpon>TileDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TileSetEditor.resx">
       <SubType>Designer</SubType>
