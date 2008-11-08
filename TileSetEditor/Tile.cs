@@ -21,7 +21,7 @@ namespace TileSetEditor
     public class Tile
     {
         // Define enums for TileLayer and TileType
-        public enum TileLayer { Terrain = 1, Structure = 2, Unit = 3 }
+        public enum TileLayer { Terrain = 1, Structure = 2, Unit = 3, Terrain2 = 4 }
         public enum TileType { Road = 1, Plain = 2, Mountain = 3, ShallowWater = 4, DeepWater = 5 }
 
         // Bitmap surface to store tile image on
