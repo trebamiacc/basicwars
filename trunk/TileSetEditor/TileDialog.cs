@@ -30,6 +30,7 @@ namespace TileSetEditor
         {
             // Set default values for Tile Layers
             comboBox_TileLayer.Items.Add("Terrain");
+            comboBox_TileLayer.Items.Add("Terrain2");
             comboBox_TileLayer.Items.Add("Structure");
             comboBox_TileLayer.Items.Add("Unit");
 
@@ -51,7 +52,7 @@ namespace TileSetEditor
             if (iNewTile == null)
             {
                 // Set ID Based on Number of tiles in set
-                int NumTiles = iTileSet.Tiles.Count;
+                int NumTiles = iTileSet.Tiles.Count + 1;
                 textBox_TileID.Text = NumTiles.ToString();
                 // Set initial tile layer
                 comboBox_TileLayer.Text = "Terrain";
@@ -130,6 +131,9 @@ namespace TileSetEditor
                 case "Terrain":
                     iLayer = Tile.TileLayer.Terrain;
                     break;
+                case "Terrain2":
+                    iLayer = Tile.TileLayer.Terrain2;
+                    break;
                 case "Structure":
                     iLayer = Tile.TileLayer.Structure;
                     break;
@@ -196,6 +200,9 @@ namespace TileSetEditor
             {
                 case Tile.TileLayer.Terrain:
                     LayerText = "Terrain";
+                    break;
+                case Tile.TileLayer.Terrain2:
+                    LayerText = "Terrain2";
                     break;
                 case Tile.TileLayer.Structure:
                     LayerText = "Structure";
