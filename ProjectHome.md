@@ -1,0 +1,1 @@
+This is a simple turn-based strategy game written in C#. It will start with only a few units available and expand to more in the future.
